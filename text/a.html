@@ -1,52 +1,153 @@
 <!DOCTYPE html>
 <html>
-	<head>
+
+
+    <head>
 		<meta charset="utf-8" />
-		<title>旋转木马</title>
-		<link rel="stylesheet" type="text/css" href="css/旋转木马.css"/>
+		<title></title>
+		<style type="text/css">
+	*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background:url(img/bg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+div{
+	width: 300px;
+	height: 300px;
+}
+.mofang{
+	transform-style: preserve-3d;
+	position: relative;
+
+	margin: 1000px auto;
+
+	transform: rotateX(-30deg) rotateY(30deg);
+}
+.mofang div{
+	position: absolute;
+	background-color: rgba(0,0,0,0.3);
+}
+.mofang div:nth-child(1){
+	transition: all 2s linear;
+}
+.mofang div:nth-child(2){
+	transition: all 2s linear;
+}
+.mofang div:nth-child(3){
+	transition: all 2s linear;
+}
+.mofang div:nth-child(4){
+	transition: all 2s linear;
+}
+.mofang div:nth-child(5){
+	transition: all 2s linear;
+}
+.mofang div:nth-child(6){
+	transition: all 2s linear;
+}
+
+.mofang div:nth-child(1){
+	transform: rotateY(90deg)
+	translateZ(150px);
+}
+.mofang div:nth-child(2){
+	transform: rotateY(180deg)
+	translateZ(150px);
+}
+.mofang div:nth-child(3){
+	transform: rotateY(270deg) translateZ(150px);
+}
+.mofang div:nth-child(4){
+	transform: rotateY(360deg) translateZ(150px);
+}
+.mofang div:nth-child(5){
+	transform: rotateX(90deg) translateZ(150px);
+}
+.mofang div:nth-child(6){
+	transform: rotateX(-90deg) translateZ(150px);
+}
+
+.mofang:hover div:nth-child(1){
+	transform: rotateY(90deg) translateZ(300px) ;
+}
+.mofang:hover div:nth-child(2){
+	transform: rotateY(180deg)
+	translateZ(300px);
+}
+.mofang:hover div:nth-child(3){
+	transform: rotateY(270deg)
+	translateZ(300px);
+}
+.mofang:hover div:nth-child(4){
+	transform: rotateY(360deg)
+	translateZ(300px);
+}
+.mofang:hover div:nth-child(5){
+	transform: rotateX(90deg)
+	translateZ(300px);
+}
+.mofang:hover div:nth-child(6){
+	transform: rotateX(-90deg)
+	translateZ(300px);
+}
+/*------------------------*/
+ul{
+	width: 100px;
+	position: relative;
+	margin: 150px auto;
+	list-style: none;
+	transform-style:preserve-3d;
+}
+li{
+	position: absolute;
+}
+img{
+	vertical-align: top;
+}
+li:nth-child(4){
+	transform: rotateY(90deg) translateZ(50px) translateY(150px);
+}
+li:nth-child(2){
+	transform: rotateY(180deg) translateZ(50px) translateY(150px); 
+}
+li:nth-child(3){
+	transform: rotateY(270deg) translateZ(50px) translateY(150px);
+}
+li:nth-child(1){
+	transform: rotateY(360deg) translateZ(50px) translateY(150px);
+}
+li:nth-child(5){
+	transform: rotateX(90deg) translateZ(-100px);
+}
+li:nth-child(6){
+	transform: rotateX(-90deg) translateZ(200px);
+}
+		</style>
 	</head>
+
 	<body>
-		<div class="root">
-			<div>
-			<img src="img/1.jpg"/>
-			</div>
-			<div>
-			<img src="img/2.jpg"/>
-			</div>
-			<div>
-			<img src="img/3.jpg"/>
-			</div>
-			<div>
-			<img src="img/4.jpg"/>
-			</div>
-			<div>
-			<img src="img/5.jpg"/>
-			</div>
-			<div>
-			<img src="img/6.jpg"/>
-			</div>
-			<div>
-			<img src="img/7.jpg"/>
-			</div>
-			<div>
-			<img src="img/8.jpg"/>
-			</div>
-			<div>
-			<img src="img/9.jpg"/>
-			</div>
-			<div>
-			<img src="img/4.jpg"/>
-			</div>
-			<div>
-			<img src="img/3.jpg"/>
-			</div>
-			<div>
-			<img src="img/2.jpg"/>
-			</div>
+		<div class="mofang">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<ul>
+				<li><img src="img/01.png" /></li>
+				<li><img src="img/02.png" /></li>
+				<li><img src="img/03.png" /></li>
+				<li><img src="img/04.png" /></li>
+				<li><img src="img/05.png" /></li>
+				<li><img src="img/06.png" /></li>
+			</ul>
 		</div>
-		
-		
-		
-		
+
 	</body>
+
 </html>
+
